@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: deploy
+  labels: 
+    name: deploy-demo
+spec:
+  minReadySeconds: 5
+  replicas: 5
+  selector:
+    matchLabels:
+      name: deploy-demo
+  template:
+    metadata:
+      labels:
+        name: deploy-demo
+    spec:
+      containers:
+        - env:
+            - name: qt
+              value: learing        
+          image: nginx
+          name: alpc
+          ports:
+            - containerPort: 80
+              protocol: TCP  
