@@ -29,4 +29,8 @@ spec:
       labels: deploy-demo 
     spec:
       containers:
-      volumes:          
+        - image: suri1002/spc:latest
+          name: spc
+          ports:
+            - containerPort: 8080
+              protocol: TCP         
