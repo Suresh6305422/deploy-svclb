@@ -18,7 +18,8 @@ spec:
       maxUnavailable: 20%
   template:
     metadata:
-      labels: deploy-demo 
+      labels:
+        name: deploy-demo 
     spec:
       containers:
         - image: suri1002/spc:latest
