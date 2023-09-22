@@ -9,4 +9,5 @@ spec:
   selector:
     name: deploy-demo
   ports:
+    - port: 8080
     - targetPort: 8080  
